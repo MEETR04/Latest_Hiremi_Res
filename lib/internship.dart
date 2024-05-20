@@ -509,7 +509,7 @@ Future<void> fetchDataFromApi() async {
                     children: [
                       Container(
                         width: screenWidth*0.97,
-                        height:double.infinity,
+                        height: screenHeight * 0.65,
                         child: InternshipList == null || InternshipList.isEmpty
                             ? Center(
                           child: CircularProgressIndicator(), // Show CircularProgressIndicator when loading
