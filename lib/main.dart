@@ -5,6 +5,7 @@ import 'package:hiremi/CongratulationScreen.dart';
 import 'package:hiremi/CorporateTraining.dart';
 import 'package:flutter_app_update/flutter_app_update.dart';
 import 'package:hiremi/ForgetUrPass.dart';
+import 'package:hiremi/JobDescription.dart';
 import 'package:hiremi/PaymentSuccesful.dart';
 import 'package:hiremi/Settings.dart';
 import 'package:hiremi/chatGptrz2.dart';
@@ -78,7 +79,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //home: HomePage(sourceScreen: 'sourceScreen', uid: '', username: 'username', verificationId: 'verificationId'),
-      home: CongratulationScreen()
+      home: InternScreen()
       // routes: {
       //   '/signin': (context) => SignIn(),
       // },

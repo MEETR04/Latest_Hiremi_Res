@@ -785,6 +785,7 @@ import 'package:hiremi/utils/api.dart';
                         style: const TextStyle(
                           fontWeight: FontWeight.w700,
                           fontSize: 20,
+                          fontFamily: "FontMain"
                         ),
                       ),
                     ),
@@ -882,6 +883,7 @@ import 'package:hiremi/utils/api.dart';
                       style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 24,
+                        fontFamily: "FontMain"
                       ),
                     ),
                   ),
@@ -914,6 +916,7 @@ import 'package:hiremi/utils/api.dart';
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 23,
+                            fontFamily: "FontMain"
                           ),
                         ),
                       ),

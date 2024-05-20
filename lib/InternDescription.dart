@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hiremi/HomePage.dart';
 import 'package:hiremi/internship.dart';
@@ -787,6 +788,7 @@ class _InternshipDescriptionState extends State<InternshipDescription> {
                       style: const TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
+                        fontFamily: "FontMain"
                       ),
                     ),
                   ),
@@ -878,12 +880,16 @@ class _InternshipDescriptionState extends State<InternshipDescription> {
               ),
 
               const Padding(
-                padding: EdgeInsets.only(right: 100.0),
-                child: Text(
-                  'About the Internship',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 24,
+                padding: EdgeInsets.only(left: 20),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'About the Internship',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 24,
+                      fontFamily: "FontMain"
+                    ),
                   ),
                 ),
               ),
@@ -907,14 +913,18 @@ class _InternshipDescriptionState extends State<InternshipDescription> {
 
                 children: [
                   const SizedBox(height: 20,),
-                  const Padding(
-                    padding:  EdgeInsets.only(right: 160.0),
-                    child:  Text(
-                      'Skill(s) required:',
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Skill(s) required:',
 
-                      style: TextStyle(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 23,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 23,
+                          fontFamily: "FontMain"
+                        ),
                       ),
                     ),
                   ),
@@ -958,15 +968,18 @@ class _InternshipDescriptionState extends State<InternshipDescription> {
 
                   const SizedBox(height: 25,),
                     const Padding(
-                      padding: EdgeInsets.only(right: 160.0),
-                      child: Text(
-                      'Who can Apply',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 22,
-                          fontFamily: 'FontMain'
+                      padding: EdgeInsets.only(left: 20),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                        'Who can Apply',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 22,
+                            fontFamily: 'FontMain'
+                        ),
+                                          ),
                       ),
-                                        ),
                     ),
                   const SizedBox(height: 20,),
                   Padding(
