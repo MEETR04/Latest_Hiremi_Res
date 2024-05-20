@@ -251,23 +251,18 @@ import 'package:flutter/widgets.dart';
           alignment: Alignment.center,
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(1),
-                child: Image.asset('images/Hiremi_Icon.png'),
-              ),
-              Image.asset('images/FirstCongratulationScreen.png'),
-              Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Text(
-                  "Let's Get Started !",
-                  style: TextStyle(
-                    fontSize: 23.5,
-                    fontWeight: FontWeight.bold,
-                    foreground: Paint()
-                      ..shader = LinearGradient(
-                        colors: [Colors.red.shade900, Colors.red.shade500],
-                      ).createShader(const Rect.fromLTWH(0, 0, 200, 70)),
-                  ),
+              Image.asset('images/Hiremi_Icon.png'),
+              Image.asset('images/FirstCongratulationScreen.png',height: screenHeight*0.43,
+                width: screenWidth*0.9,),
+              Text(
+                "Let's Get Started !",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  foreground: Paint()
+                    ..shader = LinearGradient(
+                      colors: [Colors.red.shade900, Colors.red.shade500],
+                    ).createShader(const Rect.fromLTWH(0, 0, 200, 70)),
                 ),
               ),
 
@@ -291,13 +286,14 @@ import 'package:flutter/widgets.dart';
           child: Column(
             children: [
               Image.asset('images/Hiremi_Icon.png'),
-              Image.asset('images/seceondCongratulations.png'),
+              Image.asset('images/seceondCongratulations.png',height: screenHeight*0.43,
+                width: screenWidth*0.9,),
               Align(
                 alignment: Alignment.center,
                 child: const Text(
                   "Discover Exclusive",
                   style: TextStyle(
-                    fontSize:23.5,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
@@ -308,7 +304,7 @@ import 'package:flutter/widgets.dart';
                 child: Text(
                   "Job Opportunities!",
                   style: TextStyle(
-                    fontSize: 23.5,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Colors.red,
                   ),
@@ -349,7 +345,7 @@ import 'package:flutter/widgets.dart';
               child: const Text(
                 "Get Personalized",
                 style: TextStyle(
-                  fontSize: 23.5,
+                  fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
@@ -358,7 +354,7 @@ import 'package:flutter/widgets.dart';
             Text(
               "Career Guidance!",
               style: TextStyle(
-                fontSize: 23.5,
+                fontSize: 18,
                 fontWeight: FontWeight.bold,
                 color: Colors.red,
               ),

@@ -355,167 +355,159 @@ class _FresherJobScreenState extends State<FresherJobScreen> {
             ),
           ]
                 ),
-                Center(
-                  child: Column(
-                    children: [
-                      Container(
-                        width: screenWidth*0.97,
-                        height:screenHeight * 0.65,
-                        child: fresherJobList == null || fresherJobList.isEmpty
-                            ? const Center(
-                          child: CircularProgressIndicator(), // Show CircularProgressIndicator when loading
-                        )
-                            : ListView.builder(
-                          itemCount: fresherJobList.length,
-                          itemBuilder: (BuildContext context, int index) {
-                            final job = fresherJobList[index];
+          Center(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Container(
+                    width: screenWidth * 0.97,
+                    constraints: BoxConstraints(
+                      minHeight: screenHeight * 0.65,
+                    ),
+                    child: fresherJobList == null || fresherJobList.isEmpty
+                        ? const Center(
+                      child: CircularProgressIndicator(), // Show CircularProgressIndicator when loading
+                    )
+                        : ListView.builder(
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemCount: fresherJobList.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        final job = fresherJobList[index];
 
-                            return Column(
-                              children: [
-                                Card(
-                                  color: const Color(0xFFF8F8F8),
-                                  surfaceTintColor: Colors.grey,
-                                  elevation: 9.0,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12.0),
+                        return Column(
+                          children: [
+                            Card(
+                              color: const Color(0xFFF8F8F8),
+                              surfaceTintColor: Colors.grey,
+                              elevation: 9.0,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
+                              child: Column(
+                                children: [
+                                  ListTile(
+                                    title: Text(
+                                      '${job.jobProfile}',
+                                      textAlign: TextAlign.start,
+                                      style: const TextStyle(
+                                          fontFamily: 'FontMain',
+                                          fontSize: 20),
+                                    ),
                                   ),
-                                  child: Column(
-                                    children: [
-                                      ListTile(
-                                        title: Text(
-                                          '${job.jobProfile}',
-                                          textAlign: TextAlign.start,
-                                          style: const TextStyle(
-                                              fontFamily: 'FontMain',
-                                              fontSize: 20
-                                          ),
-                                        ),
+                                  ListTile(
+                                    title: Text(
+                                      'Company: ${job.companyName}',
+                                      style: const TextStyle(
+                                        fontFamily: 'FontMain',
                                       ),
-                                      ListTile(
-                                        title: Text(
-                                          'Company: ${job.companyName}',
-                                          style: const TextStyle(
-                                            fontFamily: 'FontMain',
-                                          ),
-                                        ),
+                                    ),
+                                  ),
+                                  ListTile(
+                                    title: Text(
+                                      'Location: ${job.jobLocation}',
+                                      style: const TextStyle(
+                                        fontFamily: 'FontMain',
                                       ),
-                                      ListTile(
-                                        title: Text(
-                                          'Location: ${job.jobLocation}',
-                                          style: const TextStyle(
-                                            fontFamily: 'FontMain',
-                                          ),
-                                        ),
+                                    ),
+                                  ),
+                                  ListTile(
+                                    title: Text(
+                                      'CTC: ${job.jobCtc} LPA',
+                                      style: const TextStyle(
+                                        fontFamily: 'FontMain',
                                       ),
-                                      ListTile(
-                                        title: Text(
-                                          'CTC: ${job.jobCtc} LPA',
-                                          style: const TextStyle(
-                                            fontFamily: 'FontMain',
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 200.0,bottom: 10,right: 10),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 200.0, bottom: 10, right: 10),
+                                    child: Container(
+                                      width: 155, // Set width as per your requirement
+                                      height: 40, // Set height as per your requirement
+                                      child: InkWell(
+                                        onTap: () async {
+                                          bool applied = await checkIfApplied(loginEmail, job.jobProfile!, job.companyName!);
+                                          if (applied) {
+                                            // If already applied, show a message
+                                            ScaffoldMessenger.of(context).showSnackBar(
+                                              const SnackBar(
+                                                content: Text('You have already applied for this job.'),
+                                              ),
+                                            );
+                                          } else {
+                                            // Otherwise, navigate to the job details page
+                                            final int jobIndex = fresherJobList.indexOf(job);
+                                            print("Selected Job Index: $jobIndex");
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => JobDescription(
+                                                  jobIndex: jobIndex,
+                                                  id: job.id!,
+                                                  jobProfile: job.jobProfile!,
+                                                  jobLocation: job.jobLocation!,
+                                                  jobCtc: job.jobCtc!,
+                                                  companyName: job.companyName!,
+                                                  education: job.education!,
+                                                  jobDescreption: job.jobDescription!,
+                                                  termsAndConditions: job.termsAndConditions!,
+                                                  skillRequired: job.skillsRequired!,
+                                                  AboutCompany: job.AboutCompany!,
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                        },
                                         child: Container(
-                                          width: 155, // Set width as per your requirement
-                                          height: 40, // Set height as per your requirement
-                                          child: InkWell(
-                                            onTap: () async {
-                                              bool applied = await checkIfApplied(loginEmail, job.jobProfile!, job.companyName!);
-                                              if (applied) {
-                                                // If already applied, show a message
-                                                ScaffoldMessenger.of(context).showSnackBar(
-                                                  const SnackBar(
-                                                    content: Text('You have already applied for this job.'),
-                                                  ),
-                                                );
-                                              } else {
-                                                // Otherwise, navigate to the job details page
-                                                final int jobIndex = fresherJobList.indexOf(job);
-                                                print("Selected Job Index: $jobIndex");
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) => JobDescription(
-                                                      jobIndex: jobIndex,
-                                                      id: job.id!,
-                                                      jobProfile: job.jobProfile!,
-                                                      jobLocation: job.jobLocation!,
-                                                      jobCtc: job.jobCtc!,
-                                                      companyName: job.companyName!,
-                                                      education: job.education!,
-                                                      jobDescreption: job.jobDescription!,
-                                                      termsAndConditions: job.termsAndConditions!,
-                                                      skillRequired: job.skillsRequired!,
-                                                        AboutCompany:job.AboutCompany!,
-
-                                                    ),
-                                                  ),
-                                                );
-                                              }
-                                            },
-                                            child: Container(
-                                              width: 150,
-                                              height: 40,
-                                              decoration: BoxDecoration(
-                                                color: const Color(
-                                                    0xFFBD232B),
-                                                borderRadius:
-                                                BorderRadius.circular(
-                                                    20),
+                                          width: 150,
+                                          height: 40,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFFBD232B),
+                                            borderRadius: BorderRadius.circular(20),
+                                          ),
+                                          child: const Row(
+                                            crossAxisAlignment: CrossAxisAlignment.center,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                'View details',
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.w700,
+                                                  fontSize: 15,
+                                                  color: Colors.white,
+                                                ),
                                               ),
-                                              child: const Row(
-                                                crossAxisAlignment:
-                                                CrossAxisAlignment
-                                                    .center,
-                                                mainAxisAlignment:
-                                                MainAxisAlignment
-                                                    .center,
-                                                children: [
-                                                  Text(
-                                                    'View details',
-                                                    style: TextStyle(
-                                                      fontWeight:
-                                                      FontWeight.w700,
-                                                      fontSize: 15,
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
-                                                  SizedBox(
-                                                    width: 2,
-                                                  ),
-                                                  Icon(
-                                                    Icons
-                                                        .arrow_forward_ios,
-                                                    size: 15,
-                                                    color: Colors.white,
-                                                  ),
-                                                ],
+                                              SizedBox(
+                                                width: 2,
                                               ),
-                                            ),
+                                              Icon(
+                                                Icons.arrow_forward_ios,
+                                                size: 15,
+                                                color: Colors.white,
+                                              ),
+                                            ],
                                           ),
                                         ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: screenHeight * 0.04,
-                                ),
-                              ],
-                            );
-                          },
-                        ),
-                      ),
-                      SizedBox(
-                        height: screenHeight*0.98,
-                      ),
-
-                    ],
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              height: screenHeight * 0.02,
+                            ),
+                          ],
+                        );
+                      },
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
+            ),
+          )
+
+          ],
             ),
           ),
         ),
