@@ -874,18 +874,21 @@ import 'package:hiremi/utils/api.dart';
                   child: Divider(),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 50.0),
-                  child: Text(
-                    'About the Job Description',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 24,
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'About the Job Description',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 24,
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(height: 10,),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
@@ -902,13 +905,16 @@ import 'package:hiremi/utils/api.dart';
                   children: [
                     SizedBox(height: 20,),
                     Padding(
-                      padding:  EdgeInsets.only(right: 170.0),
-                      child:  Text(
-                        'Skill(s) required:',
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Skill(s) required:',
 
-                        style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 23,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 23,
+                          ),
                         ),
                       ),
                     ),
@@ -951,21 +957,24 @@ import 'package:hiremi/utils/api.dart';
                     SizedBox(height: 25,),
 
                     Padding(
-                      padding: const EdgeInsets.only(right: 160.0),
-                      child: const Text(
-                        'Who can Apply',
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: const Text(
+                          'Who can Apply',
 
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 22,
-                            fontFamily: 'FontMain'
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 22,
+                              fontFamily: 'FontMain'
+                          ),
                         ),
                       ),
                     ),
                     SizedBox(height: 20,),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Container(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
                           widget.termsAndConditions,
@@ -979,28 +988,34 @@ import 'package:hiremi/utils/api.dart';
                     ),
                     SizedBox(height: 20,),
                     Padding(
-                      padding: const EdgeInsets.only(right: 70.0),
-                      child:  Text(
-                        "About ${widget.companyName} company" ,
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "About ${widget.companyName} company" ,
 
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 22,
-                            fontFamily: 'FontMain'
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 22,
+                              fontFamily: 'FontMain'
+                          ),
                         ),
                       ),
                     ),
                     SizedBox(height: 22),
                     Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
-                      child:  Text(
-                        "${widget.AboutCompany}" ,
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "${widget.AboutCompany}" ,
 
-                        style: const TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                          color: MyColor.black,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                            color: MyColor.black,
 
+                          ),
                         ),
                       ),
                     ),

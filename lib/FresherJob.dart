@@ -360,7 +360,7 @@ class _FresherJobScreenState extends State<FresherJobScreen> {
                     children: [
                       Container(
                         width: screenWidth*0.97,
-                        height:screenHeight * 0.7,
+                        height:screenHeight * 0.65,
                         child: fresherJobList == null || fresherJobList.isEmpty
                             ? const Center(
                           child: CircularProgressIndicator(), // Show CircularProgressIndicator when loading

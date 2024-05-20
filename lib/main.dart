@@ -78,7 +78,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //home: HomePage(sourceScreen: 'sourceScreen', uid: '', username: 'username', verificationId: 'verificationId'),
-      home: InternScreen()
+      home: FresherJobScreen()
       // routes: {
       //   '/signin': (context) => SignIn(),
       // },
