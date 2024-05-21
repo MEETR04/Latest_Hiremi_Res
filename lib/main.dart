@@ -16,6 +16,7 @@ import 'package:hiremi/pageview_screen.dart';
 import 'package:hiremi/seceondCongratulationScreen.dart';
 import 'package:hiremi/firstCongratulationScreen.dart';
 import 'package:hiremi/threeCongratulationScreen.dart';
+import 'package:hiremi/widgets/bottomnav.dart';
 import 'package:in_app_update/in_app_update.dart';
 import 'package:hiremi/FresherJob.dart';
 import 'package:hiremi/HomePage.dart';

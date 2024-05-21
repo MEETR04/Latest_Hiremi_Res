@@ -12,6 +12,7 @@ import 'package:hiremi/api_services/base_services.dart';
 import 'package:hiremi/api_services/user_services.dart';
 import 'package:hiremi/chatGptrz.dart';
 import 'package:hiremi/chatGptrz2.dart';
+import 'package:hiremi/widgets/bottomnav.dart';
 
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -151,7 +152,8 @@ class _UserVerificationScreenState extends State<UserVerificationScreen> {
         // Successful API call
 
           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-            return HomePage(sourceScreen: 'Screen2', uid: uid, username: '', verificationId: ID2,);
+            return Bottom();
+              HomePage(sourceScreen: 'Screen2', uid: uid, username: '', verificationId: ID2,);
           }
           ),);
           // print('Stored UID: $uid');

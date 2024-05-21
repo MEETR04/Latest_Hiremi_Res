@@ -6,6 +6,7 @@ import 'package:hiremi/HomePage.dart';
 import 'package:hiremi/internship.dart';
 import 'package:hiremi/utils/api.dart';
 import 'package:hiremi/utils/my_colors.dart';
+import 'package:hiremi/widgets/bottomnav.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:ui';
@@ -627,7 +628,8 @@ class _InternshipDescriptionState extends State<InternshipDescription> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const HomePage(sourceScreen: "Screen11", uid: "", username: "", verificationId: ""),
+            builder: (context) => const Bottom()
+            //HomePage(sourceScreen: "Screen11", uid: "", username: "", verificationId: ""),
           ),
         );
 

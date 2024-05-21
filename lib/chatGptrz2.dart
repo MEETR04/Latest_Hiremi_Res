@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:hiremi/HomePage.dart';
 import 'package:hiremi/PaymentSuccesful.dart';
 import 'package:hiremi/api_services/base_services.dart';
+import 'package:hiremi/widgets/bottomnav.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
@@ -478,7 +479,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
         // Successful API call
 
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-          return HomePage(sourceScreen: 'Screen2', uid: uid, username: '', verificationId: ID2,);
+          return Bottom();
+            HomePage(sourceScreen: 'Screen2', uid: uid, username: '', verificationId: ID2,);
         }
         ),);
         // print('Stored UID: $uid');
@@ -635,7 +637,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
       if (response.statusCode == 200) {
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-          return HomePage(sourceScreen: '', uid: uid, username: '', verificationId: ID2,);
+          return Bottom();
+            HomePage(sourceScreen: '', uid: uid, username: '', verificationId: ID2,);
         }
         ),);
         // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
@@ -722,7 +725,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
       if (response.statusCode == 200) {
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-          return HomePage(sourceScreen: 'Screen1', uid: uid, username: '', verificationId: ID2,);
+          return Bottom();
+            HomePage(sourceScreen: 'Screen1', uid: uid, username: '', verificationId: ID2,);
         }
         ),);
         print("Update payment status. Status code: ${response.statusCode}, Response: ${response.body}, mentorship ID:$mentorshipId");
@@ -811,7 +815,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
       if (response.statusCode == 200) {
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-          return HomePage(sourceScreen: 'Screen1', uid: uid, username: '', verificationId: ID2,);
+          return Bottom();
+            HomePage(sourceScreen: 'Screen1', uid: uid, username: '', verificationId: ID2,);
         }
         ),);
         print("Update payment status. Status code: ${response.statusCode}, Response: ${response.body}, mentorship ID:$corporatetrainingId");

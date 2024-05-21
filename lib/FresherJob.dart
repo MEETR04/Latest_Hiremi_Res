@@ -9,6 +9,7 @@ import 'package:hiremi/models/fresher_job_model.dart';
 import 'package:hiremi/signin.dart';
 import 'package:hiremi/utils/api.dart';
 import 'package:hiremi/utils/my_colors.dart';
+import 'package:hiremi/widgets/bottomnav.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -284,7 +285,9 @@ class _FresherJobScreenState extends State<FresherJobScreen> {
                       // sharedPref.setBool(CongratulationScreenState.KEYLOGIN, false);
                       Navigator.pushAndRemoveUntil(
                         context,
-                        MaterialPageRoute(builder: (context) => const HomePage(sourceScreen: '', uid: '', username: '', verificationId: '')),
+                        MaterialPageRoute(builder: (context) => const Bottom(),
+                        //HomePage(sourceScreen: '', uid: '', username: '', verificationId: '')
+                        ),
                             (Route<dynamic> route) => false, // This line removes all routes from the stack
                       );
                     },

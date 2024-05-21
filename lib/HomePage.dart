@@ -8,7 +8,6 @@ import 'package:hiremi/CongratulationScreen.dart';
 import 'package:hiremi/CorporateTraining.dart';
 import 'package:hiremi/FresherJob.dart';
 import 'package:hiremi/FresherJob.dart';
-import 'package:hiremi/FreshersJob2.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:hiremi/Mentorship.dart';
 import 'package:hiremi/Payment.dart';
@@ -3136,9 +3135,9 @@ import 'chatGptrz2.dart';
       // print("Width is $screenWidth");
       // print("Height is $screenHeight");
 
-
-
       return Scaffold(
+        extendBody: true,
+        backgroundColor: Colors.white,
           key: _scaffoldKey,
        drawer: SideNavBar(),
           body: SafeArea(
@@ -3147,7 +3146,7 @@ import 'chatGptrz2.dart';
               children: [
                 Stack(
                 children: [
-            
+
                   ClipRRect(
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(50),
@@ -3164,13 +3163,13 @@ import 'chatGptrz2.dart';
                       ),
                       width:screenWidth,
                       height:211,
-            
-            
+
+
                     ),
-            
-            
+
+
                   ),
-            
+
                   Column(children: [
 
                   Padding(
@@ -3341,7 +3340,7 @@ import 'chatGptrz2.dart';
                         } else {
                           // Show dialog box indicating not eligible for Fresher Job
                         //  String errormessage="You are only allowed for Fresher Jobs";
-            
+
                          // showCustomDialog(errormessage);
                         }
                       },
@@ -3350,7 +3349,7 @@ import 'chatGptrz2.dart';
                         height: screenHeight*0.213,
                       ),
                     ),
-            
+
                     InkWell(
                       onTap: () {
                         if (fresherJob) {
@@ -3371,8 +3370,8 @@ import 'chatGptrz2.dart';
                         height: screenHeight*0.213,
                       ),
                     )
-            
-            
+
+
                   ],
                 ),
                 Row(
@@ -3397,7 +3396,7 @@ import 'chatGptrz2.dart';
                         width: screenWidth*0.438, // Set your desired width
                         height: screenHeight*0.213,
                       ),
-            
+
                     ),
                     InkWell(
                       onTap: () {
@@ -3419,7 +3418,7 @@ import 'chatGptrz2.dart';
                         height: screenHeight*0.213,
                       ),
                     )
-            
+
                   ],
                 ),
                 Row(
@@ -3448,10 +3447,10 @@ import 'chatGptrz2.dart';
                             height: screenHeight*0.213,
                           ),
                         ),
-            
+
                       ],
                     ),
-            
+
                     InkWell(
                       onTap: () {
                         if (!corporateTraining) {
@@ -3474,16 +3473,16 @@ import 'chatGptrz2.dart';
                             width: screenWidth*0.438, // Set your desired width
                             height: screenHeight*0.213,
                           ),
-            
-            
+
+
                         ],
                       ),
-            
-            
+
+
                     )
-            
-            
-            
+
+
+
                   ],
                 ),
                 SizedBox(height:screenHeight*0.008 ,),
@@ -3537,74 +3536,74 @@ import 'chatGptrz2.dart';
                 //     },
                 //   ),
                 // ),
-                Stack(
-                  children: [
-                    // Container(
-                    //   height: 70,
-                    //   width: double.infinity,
-                    //   color: Colors.grey.shade300,
-                    // ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 40.0),
-                      child: Container(
-                        height: 80,
-                        width: double.infinity,
-                        color: Colors.grey.shade300,
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 30.0),
-                          child: Container(
-                            height: 80,
-                            width: 80,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle, color: Colors.grey.shade300),
-                            child: Center(
-                                child: Container(
-                                  height: 60,
-                                  width: 60,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle, color: Colors.grey.shade100),
-                                  child: const Center(
-                                    child: Icon(Icons.home, size: 50, color: Colors.red),
-                                  ),
-                                )),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10, right: 30),
-                          child: Container(
-                            height: 80,
-                            width: 80,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle, color: Colors.grey.shade100),
-                            child: Center(
-                                child: Container(
-                                  height: 60,
-                                  width: 60,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle, color: Colors.grey.shade300),
-                                  child: Center(
-                                    child: IconButton(
-                                        onPressed: () {
-                                          Navigator.push(context,
-                                              MaterialPageRoute(builder: (context) {
-                                                return const Settings();
-                                              }));
-                                        },
-                                        icon: const Icon(Icons.settings,
-                                            size: 45, color: Colors.grey)),
-                                  ),
-                                )),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                // Stack(
+                //   children: [
+                //     // Container(
+                //     //   height: 70,
+                //     //   width: double.infinity,
+                //     //   color: Colors.grey.shade300,
+                //     // ),
+                //     // Padding(
+                //     //   padding: const EdgeInsets.only(top: 40.0),
+                //     //   child: Container(
+                //     //     height: 80,
+                //     //     width: double.infinity,
+                //     //     color: Colors.grey.shade300,
+                //     //   ),
+                //     // ),
+                //     // Row(
+                //     //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //     //   children: [
+                //     //     Padding(
+                //     //       padding: const EdgeInsets.only(left: 30.0),
+                //     //       child: Container(
+                //     //         height: 80,
+                //     //         width: 80,
+                //     //         decoration: BoxDecoration(
+                //     //             shape: BoxShape.circle, color: Colors.grey.shade300),
+                //     //         child: Center(
+                //     //             child: Container(
+                //     //               height: 60,
+                //     //               width: 60,
+                //     //               decoration: BoxDecoration(
+                //     //                   shape: BoxShape.circle, color: Colors.grey.shade100),
+                //     //               child: const Center(
+                //     //                 child: Icon(Icons.home, size: 50, color: Colors.red),
+                //     //               ),
+                //     //             )),
+                //     //       ),
+                //     //     ),
+                //     //     Padding(
+                //     //       padding: const EdgeInsets.only(top: 10, right: 30),
+                //     //       child: Container(
+                //     //         height: 80,
+                //     //         width: 80,
+                //     //         decoration: BoxDecoration(
+                //     //             shape: BoxShape.circle, color: Colors.grey.shade100),
+                //     //         child: Center(
+                //     //             child: Container(
+                //     //               height: 60,
+                //     //               width: 60,
+                //     //               decoration: BoxDecoration(
+                //     //                   shape: BoxShape.circle, color: Colors.grey.shade300),
+                //     //               child: Center(
+                //     //                 child: IconButton(
+                //     //                     onPressed: () {
+                //     //                       Navigator.push(context,
+                //     //                           MaterialPageRoute(builder: (context) {
+                //     //                             return const Settings();
+                //     //                           }));
+                //     //                     },
+                //     //                     icon: const Icon(Icons.settings,
+                //     //                         size: 45, color: Colors.grey)),
+                //     //               ),
+                //     //             )),
+                //     //       ),
+                //     //     ),
+                //     //   ],
+                //     // ),
+                //   ],
+                // ),
               ],
             ),
           ):
@@ -3966,53 +3965,10 @@ import 'chatGptrz2.dart';
 
                   ],
                 ),
-
-                //SizedBox(height:screenHeight*0.078 ,),
-                AspectRatio(
-                  aspectRatio: 39/9,
-                  child: CurvedNavigationBar(
-                    backgroundColor: Colors.white10,
-                    color: Color(0xFFEDEDED),
-                    items:[
-                      Icon(Icons.home,size: 50,color: _iconColors[0] ),
-                      Icon(Icons.mail,size: 50,color: _iconColors[1]),
-                      InkWell(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const Settings(),
-                              ),
-                            );
-                            // Callback function to be executed when InkWell is tapped
-                            // Place your code here
-                          },
-                          child: Icon(Icons.face_2_rounded,size: 50,color: _iconColors[2])),
-
-                    ],
-                    onTap: (index){
-                      setState(() {
-                        _currentIndex=index;
-                        for (int i = 0; i < _iconColors.length; i++) {
-                          if (i == index) {
-                            _iconColors[i] =
-                                Colors.red; // Change the color for the tapped icon
-
-                          } else {
-                            _iconColors[i] =
-                                Color(0xFF43485E); // Reset the color for other icons
-                          }
-                        }
-                      });
-                    },
-                  ),
-                ),
-
-
               ],
             ),
           ),
-        )
+        ),
       );
     }
   }

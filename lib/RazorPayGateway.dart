@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:hiremi/CongratulationScreen.dart';
 import 'package:hiremi/HomePage.dart';
+import 'package:hiremi/widgets/bottomnav.dart';
 import 'package:http/http.dart' as http;
 import 'package:hiremi/api_services/base_services.dart';
 import 'package:hiremi/signin.dart';
@@ -156,7 +157,8 @@ import 'package:shared_preferences/shared_preferences.dart';
           // Successful API call
 
           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-            return HomePage(sourceScreen: 'Screen2', uid: uid, username: '', verificationId: ID2,);
+            return Bottom();
+              //HomePage(sourceScreen: 'Screen2', uid: uid, username: '', verificationId: ID2,);
           }
           ),);
           // print('Stored UID: $uid');
@@ -313,7 +315,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
         if (response.statusCode == 200) {
           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-            return HomePage(sourceScreen: '', uid: uid, username: '', verificationId: ID2,);
+            return Bottom();
+              //HomePage(sourceScreen: '', uid: uid, username: '', verificationId: ID2,);
           }
           ),);
           print("Payment status updated successfully for registration ID $registrationId");
@@ -395,7 +398,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
         if (response.statusCode == 200) {
           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-            return HomePage(sourceScreen: 'Screen1', uid: uid, username: '', verificationId: ID2,);
+            return Bottom();
+              //HomePage(sourceScreen: 'Screen1', uid: uid, username: '', verificationId: ID2,);
           }
           ),);
           print("Update payment status. Status code: ${response.statusCode}, Response: ${response.body}, mentorship ID:$mentorshipId");

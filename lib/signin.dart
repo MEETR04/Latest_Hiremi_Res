@@ -10,6 +10,7 @@ import 'package:hiremi/HomePage.dart';
 import 'package:hiremi/PhonePePayment.dart';
 import 'package:hiremi/Register.dart';
 import 'package:hiremi/api_services/base_services.dart';
+import 'package:hiremi/widgets/bottomnav.dart';
 import 'package:hiremi/widgets/neo_text.dart';
 import 'package:hiremi/widgets/showDialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -164,11 +165,12 @@ class _SignInState extends State<SignIn> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return HomePage(
-                        sourceScreen: 'Screen1',
-                        uid: 'uid',
-                        username: userEmail, verificationId: '',
-                      );
+                      return Bottom();
+                        //HomePage(
+                      //   sourceScreen: 'Screen1',
+                      //   uid: 'uid',
+                      //   username: userEmail, verificationId: '',
+                      // );
                     },
                   ),
                 );
@@ -181,12 +183,13 @@ class _SignInState extends State<SignIn> {
                    Navigator.pushReplacement(
                      context,
                      MaterialPageRoute(
-                       builder: (context) => HomePage(
-                         sourceScreen: 'Screen5',
-                         uid: '',
-                         username: '',
-                         verificationId: '',
-                       ),
+                       builder: (context) => Bottom()
+                       //     HomePage(
+                       //   sourceScreen: 'Screen5',
+                       //   uid: '',
+                       //   username: '',
+                       //   verificationId: '',
+                       // ),
                      ),
                    );
                  }
@@ -196,12 +199,13 @@ class _SignInState extends State<SignIn> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomePage(
-                      sourceScreen: '',
-                      uid: '',
-                      username: '',
-                      verificationId: '',
-                    ),
+                    builder: (context) => Bottom()
+                    //     HomePage(
+                    //   sourceScreen: '',
+                    //   uid: '',
+                    //   username: '',
+                    //   verificationId: '',
+                    // ),
                   ),
                 );
               }
@@ -210,12 +214,13 @@ class _SignInState extends State<SignIn> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomePage(
-                      sourceScreen: 'Screen6',
-                      uid: '',
-                      username: '',
-                      verificationId: '',
-                    ),
+                    builder: (context) => Bottom()
+                    //     HomePage(
+                    //   sourceScreen: 'Screen6',
+                    //   uid: '',
+                    //   username: '',
+                    //   verificationId: '',
+                    // ),
                   ),
                 );
               }
@@ -224,12 +229,13 @@ class _SignInState extends State<SignIn> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomePage(
-                      sourceScreen: '',
-                      uid: '',
-                      username: '',
-                      verificationId: '',
-                    ),
+                    builder: (context) => Bottom()
+                    //     HomePage(
+                    //   sourceScreen: '',
+                    //   uid: '',
+                    //   username: '',
+                    //   verificationId: '',
+                    // ),
                   ),
                 );
               }

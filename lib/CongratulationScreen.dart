@@ -4,6 +4,7 @@ import 'package:hiremi/PhonePePayment.dart';
 import 'package:hiremi/api_services/base_services.dart';
 
 import 'package:hiremi/pageview_screen.dart';
+import 'package:hiremi/widgets/bottomnav.dart';
 
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -152,12 +153,13 @@ class CongratulationScreenState extends State<CongratulationScreen> {
                Navigator.pushReplacement(
                  context,
                  MaterialPageRoute(
-                   builder: (context) => HomePage(
-                     sourceScreen: 'Screen5',
-                     uid: '',
-                     username: '',
-                     verificationId: '',
-                   ),
+                   builder: (context) => Bottom()
+                   //     HomePage(
+                   //   sourceScreen: 'Screen5',
+                   //   uid: '',
+                   //   username: '',
+                   //   verificationId: '',
+                   // ),
                  ),
                );
              }
@@ -166,12 +168,13 @@ class CongratulationScreenState extends State<CongratulationScreen> {
              Navigator.pushReplacement(
                context,
                MaterialPageRoute(
-                 builder: (context) => HomePage(
-                   sourceScreen: 'Screen6',
-                   uid: '',
-                   username: '',
-                   verificationId: '',
-                 ),
+                 builder: (context) => Bottom()
+                 //     HomePage(
+                 //   sourceScreen: 'Screen6',
+                 //   uid: '',
+                 //   username: '',
+                 //   verificationId: '',
+                 // ),
                ),
              );
            }
@@ -183,12 +186,13 @@ class CongratulationScreenState extends State<CongratulationScreen> {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => HomePage(
-                    sourceScreen: '',
-                    uid: '',
-                    username: '',
-                    verificationId: '',
-                  ),
+                  builder: (context) => Bottom()
+                  //     HomePage(
+                  //   sourceScreen: '',
+                  //   uid: '',
+                  //   username: '',
+                  //   verificationId: '',
+                  // ),
                 ),
               );
             }
@@ -201,12 +205,13 @@ class CongratulationScreenState extends State<CongratulationScreen> {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => HomePage(
-              sourceScreen: 'Screen1',
-              uid: '',
-              username: '',
-              verificationId: '',
-            ),
+            builder: (context) => Bottom()
+            //     HomePage(
+            //   sourceScreen: 'Screen1',
+            //   uid: '',
+            //   username: '',
+            //   verificationId: '',
+            // ),
           ),
         );
       } else {

@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:hiremi/CongratulationScreen.dart';
 import 'package:hiremi/HomePage.dart';
 import 'package:hiremi/api_services/base_services.dart';
+import 'package:hiremi/widgets/bottomnav.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:hiremi/signin.dart';
@@ -142,21 +143,21 @@ class _SettingsState extends State<Settings> {
                     padding: const EdgeInsets.only(right: 280.0),
                     child: InkWell(
                       onTap: () {
-                        // Navigator.pushReplacement(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     builder: (context) {
-                        //       return HomePage(
-                        //         sourceScreen: '',
-                        //         uid: '',
-                        //         username: '',
-                        //         verificationId: '',
-                        //       );
-                        //     },
-                        //   ),
-                        // );
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return Bottom();
+                                HomePage(
+                                sourceScreen: '',
+                                uid: '',
+                                username: '',
+                                verificationId: '',
+                              );
+                            },
+                          ),
+                        );
 
-                        Navigator.pop(context);
                       },
                       child: Image.asset('images/Back_Button.png'),
                     ),

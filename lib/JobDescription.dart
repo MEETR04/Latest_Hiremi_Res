@@ -5,6 +5,7 @@ import 'package:hiremi/FresherJob.dart';
 import 'package:hiremi/HomePage.dart';
 import 'package:hiremi/utils/api.dart';
   import 'package:hiremi/utils/my_colors.dart';
+import 'package:hiremi/widgets/bottomnav.dart';
   import 'package:http/http.dart' as http;
   import 'dart:convert';
   import 'dart:ui';
@@ -625,7 +626,8 @@ import 'package:hiremi/utils/api.dart';
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const HomePage(sourceScreen: "Screen10", uid: "", username: "", verificationId: ""),
+              builder: (context) => const Bottom()
+              //HomePage(sourceScreen: "Screen10", uid: "", username: "", verificationId: ""),
             ),
           );
 
