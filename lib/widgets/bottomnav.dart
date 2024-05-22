@@ -23,12 +23,11 @@ class _BottomState extends State<Bottom> {
       extendBody: true,
       body: _pages[_currentindex],
       bottomNavigationBar: CurvedNavigationBar(
-        height: 75,
-        backgroundColor: Colors.white,
-        color: Colors.grey.shade400,
+        backgroundColor: Colors.transparent,
+        color: Colors.redAccent,
         items: const [
-          Icon(Icons.home,color: Colors.redAccent,size: 40,),
-          Icon(Icons.settings, color: Colors.redAccent,size: 40,),
+          Icon(Icons.home,color: Colors.white,size: 40,),
+          Icon(Icons.settings, color: Colors.white,size: 40,),
         ],
         onTap: (index){
           setState(() {
