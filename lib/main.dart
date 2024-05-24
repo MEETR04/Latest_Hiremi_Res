@@ -79,7 +79,6 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor:Colors.white),
         useMaterial3: true,
       ),
-      //home: HomePage(sourceScreen: 'sourceScreen', uid: '', username: 'username', verificationId: 'verificationId'),
       home: CongratulationScreen()
       // routes: {
       //   '/signin': (context) => SignIn(),
