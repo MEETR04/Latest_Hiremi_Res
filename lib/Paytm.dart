@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:paytm_routersdk/paytm_routersdk.dart';
-import 'package:paytmthree/callbackurl.dart';
 
 
 class MyHomePage extends StatefulWidget {
@@ -173,15 +172,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
       // Checking response status
       if (callbackResponse.statusCode == 200) {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => CallbackScreen(
-              callbackUrl: callbackUrl,
-              responseBody: callbackResponse.body,
-            ),
-          ),
-        );
         print('Transaction response posted successfully');
         print(callbackResponse.statusCode);
         print(callbackResponse.body);
