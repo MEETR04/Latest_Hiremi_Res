@@ -7,6 +7,7 @@ import 'package:flutter_app_update/flutter_app_update.dart';
 import 'package:hiremi/ForgetUrPass.dart';
 import 'package:hiremi/JobDescription.dart';
 import 'package:hiremi/PaymentSuccesful.dart';
+import 'package:hiremi/Paytm.dart';
 import 'package:hiremi/Settings.dart';
 import 'package:hiremi/chatGptrz2.dart';
 import 'package:hiremi/dependenct_injection.dart';
@@ -79,7 +80,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor:Colors.white),
         useMaterial3: true,
       ),
-      home: const CongratulationScreen()
+      home: MyHomePage()
       // routes: {
       //   '/signin': (context) => SignIn(),
       // },

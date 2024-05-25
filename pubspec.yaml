@@ -62,7 +62,7 @@ dependencies:
   connectivity_plus: ^6.0.3
   get: ^4.6.6
   paytm_routersdk: ^1.0.1
-
+  paytm_allinonesdk: ^1.2.5
 
 dev_dependencies:
   flutter_test:

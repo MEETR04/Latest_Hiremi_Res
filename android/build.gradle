@@ -21,8 +21,10 @@ allprojects {
         maven {
             url  "https://phonepe.mycloudrepo.io/public/repositories/phonepe-intentsdk-android"
         }
+
     }
 }
+
 
 
 rootProject.buildDir = '../build'

@@ -1,7 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:paytm_routersdk/paytm_routersdk.dart';
+import 'dart:async';
+import 'package:paytm_allinonesdk/paytm_allinonesdk.dart';
 
 
 class MyHomePage extends StatefulWidget {
@@ -92,11 +93,13 @@ class _MyHomePageState extends State<MyHomePage> {
           var mid = '216820000000000077910';
 
           var callbackUrl = 'http://13.127.81.177:8000/callback/';
-          var isStaging = false; // Set to true for staging environment
+          var isStaging = false;
+          var restrictAppInvoke = true;
+          var enableAssist = false;// Set to true for staging environment
 
           // Use router SDK to initiate transaction
           var transactionResponse =
-          await _initiateTransaction(txnToken, orderId, amount, mid, callbackUrl, isStaging);
+          await _initiateTransaction(txnToken, orderId, amount, mid, callbackUrl, isStaging, restrictAppInvoke, enableAssist);
 
           // Check if transactionResponse is not null and contains 'TXNID'
           if (transactionResponse != null && transactionResponse.containsKey('TXNID')) {
@@ -137,11 +140,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<Map?> _initiateTransaction(String txnToken, String orderId, String amount, String mid,
-      String callbackUrl, bool isStaging) async {
+      String callbackUrl, bool isStaging, bool restrictAppInvoke, bool enableAssist) async {
     try {
       // Initiate the transaction using Paytm Router SDK
       var transactionResponse =
-      await PaytmRouterSdk.startTransaction(mid, orderId, amount, txnToken, callbackUrl, isStaging);
+      await AllInOneSdk.startTransaction(mid, orderId, amount, txnToken, callbackUrl, isStaging, restrictAppInvoke, enableAssist);
 
       // Handle the transaction response
       if (transactionResponse != null && transactionResponse['STATUS'] == 'TXN_SUCCESS') {

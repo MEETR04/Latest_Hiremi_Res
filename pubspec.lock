@@ -408,6 +408,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.1"
+  paytm_allinonesdk:
+    dependency: "direct main"
+    description:
+      name: paytm_allinonesdk
+      sha256: "4f25e8d6c2b614e592f5094f87fd157453b380567581cd774ff6a56a93e90d41"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.5"
   paytm_routersdk:
     dependency: "direct main"
     description:
